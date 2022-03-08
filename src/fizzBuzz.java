@@ -12,7 +12,7 @@ final static int END = 100;
 			if (i % 3 == 0) {
 				System.out.print("Fizz");
 			}
-			if (i % 5 == 0) {
+			else if (i % 5 == 0) {
 				System.out.print("Buzz");
 			}
 			else {
