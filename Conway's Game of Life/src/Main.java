@@ -1,10 +1,11 @@
+import javafx.fxml.*;
 import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class conway extends Application {
+public class Main extends Application {
 	final int EDGECELLS = 20;
 
 	@Override
