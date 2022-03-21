@@ -1,0 +1,15 @@
+README
+
+This program is written to take a representation of a network graph, as
+described as follows, to print an adjacency matrix.
+
+The network graph should be represented as a spaced list of integers, denoting
+the 'name' of each vertex (classically this would be 0 to n-1, where n is the
+number of vertices).
+Every line following the first will be understood as a reference to the 'name'
+of the vertex being the first integer, and every following integer in the line
+represents the next vertex between which an 'edge' is located.
+
+The output will be an n-by-n matrix of 1s and 0s, where each value denotes the
+existence (1) or lack of (0) an edge at the intersection of the vertices 'named'
+by their position in this matrix.
