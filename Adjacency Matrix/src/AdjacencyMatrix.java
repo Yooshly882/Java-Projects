@@ -1,20 +1,29 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AdjacencyMatrix {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		String vList = sc.nextLine();
-		String edgeList = null;
 		
-		while (sc.hasNextLine()) {
-			edgeList = edgeList + sc.nextLine() + ", ";
+		ArrayList<Integer> vertList = new ArrayList<Integer>();
+		ArrayList<Integer> edgeList = new ArrayList<Integer>();
+		
+		Scanner sc = new Scanner(System.in).useDelimiter(" *");
+		System.out.print("Enter vertex list: ");
+		
+		while (sc.hasNextInt()) {
+			vertList.add(sc.nextInt());
+		}
+		
+		System.out.println("Enter list of edges for each given consecutive vertex: ");
+		
+		for (Integer i : vertList) {
+			while (sc.hasNextInt()) {
+				edgeList.add(i, sc.nextInt());
+			}
+			System.out.println(i + "" + edgeList);
 		}
 		sc.close();
-		
-		System.out.println(vList);
-		System.out.println(edgeList);
 	}
 
 }
