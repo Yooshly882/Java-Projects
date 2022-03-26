@@ -27,8 +27,22 @@ public class AdjacencyMatrix {
 			String el = sc.nextLine();
 			edgeList.add(el);
 		}
-		System.out.println(edgeList);
+		
 		sc.close();
+		printAdjMatrix(vertList, edgeList);
 	}
-
+	public static void printAdjMatrix(ArrayList<Integer> vList, ArrayList<String> eList) {
+		for (int i : vList) {
+			System.out.print("[ ");
+			for (int j : vList) {
+				if (eList.get(i).contains(vList.get(j).toString())) {
+					System.out.print("1 ");
+				}
+				else {
+					System.out.print("0 ");
+				}
+			}
+			System.out.print("]\n");
+		}
+	}
 }
